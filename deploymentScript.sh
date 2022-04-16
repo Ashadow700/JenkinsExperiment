@@ -11,3 +11,6 @@ kill -15 $pid
 
 pid=$(lsof -t -i :4242 -s TCP:LISTEN)
 echo "pid: $pid"
+
+echo "ls"
+ls

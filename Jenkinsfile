@@ -11,6 +11,13 @@ pipeline {
                 sh 'mvn clean install'
                 sh 'chmod 751 ./deploymentScript.sh'
                 sh './deploymentScript.sh'
+                sh 'java -jar ./target/JenkinsExperiment-spring-boot.jar'
+            }
+        }
+    }
+}
+
+
 //             sh ./deploymentScript.sh
 //                 lsof -t -i :4242 -s TCP:LISTEN
 //                 sh '''#!/bin/bash
@@ -26,7 +33,3 @@ pipeline {
 //                 sh "pid=\$(lsof -t -i :4242 -s TCP:LISTEN)"
 //                 sh "echo \$pid"
 //                 sh 'kill -15 $pid'
-            }
-        }
-    }
-}
