@@ -8,7 +8,7 @@ pipeline {
         }
         stage('this is my second stage') {
             steps {
-                sh "mvn clean install"
+                sh 'mvn clean install'
                 sh 'chmod 751 ./deploymentScript.sh'
                 sh './deploymentScript.sh'
 //             sh ./deploymentScript.sh
