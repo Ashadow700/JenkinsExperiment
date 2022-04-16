@@ -8,6 +8,7 @@ pipeline {
         }
         stage('this is my second stage') {
             steps {
+                lsof -t -i :4242 -s TCP:LISTEN
                 sh '''#!/bin/bash
                     echo "Hello from bash"
                     echo "Who I'm $SHELL"
