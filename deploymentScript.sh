@@ -15,4 +15,5 @@ echo "pid: $pid"
 echo "ls"
 ls
 
-java -jar ./target/JenkinsExperiment-spring-boot.jar &
+echo "ls"
+pwd
