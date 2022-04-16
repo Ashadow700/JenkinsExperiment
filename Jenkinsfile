@@ -8,7 +8,8 @@ pipeline {
         }
         stage('this is my second stage') {
             steps {
-            sh './deploymentScript.sh'
+                sh 'chmod 751 ./deploymentScript.sh'
+                sh './deploymentScript.sh'
 //             sh ./deploymentScript.sh
 //                 lsof -t -i :4242 -s TCP:LISTEN
 //                 sh '''#!/bin/bash
