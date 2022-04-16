@@ -4,17 +4,19 @@ pipeline {
         stage('build') {
             steps {
                 sh 'echo "this is my Jenkinsfile!!=)"'
-                sh 'mvn --version'
-                sh 'echo "some text"'
             }
         }
         stage('this is my second stage') {
             steps {
-                sh 'echo "this is the text from second step"'
-                echo 'yet another step and stuff'
-                sh "echo \$pid"
-                sh "pid=\$(lsof -t -i :4242 -s TCP:LISTEN)"
-                sh "echo \$pid"
+                sh '''#!/bin/bash
+
+                    echo "Hello from bash"
+                    echo "Who I'm $SHELL"
+                '''
+//                 sh 'echo "this is the text from second step"'
+//                 sh "echo \$pid"
+//                 sh "pid=\$(lsof -t -i :4242 -s TCP:LISTEN)"
+//                 sh "echo \$pid"
 //                 sh 'kill -15 $pid'
             }
         }
