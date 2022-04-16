@@ -11,5 +11,3 @@ kill -15 $pid
 
 pid=$(lsof -t -i :4242 -s TCP:LISTEN)
 echo "pid: $pid"
-
-mvn clean compile exec:java &

@@ -10,6 +10,7 @@ pipeline {
             steps {
                 sh 'chmod 751 ./deploymentScript.sh'
                 sh './deploymentScript.sh'
+                mvn clean compile exec:java
 //             sh ./deploymentScript.sh
 //                 lsof -t -i :4242 -s TCP:LISTEN
 //                 sh '''#!/bin/bash
