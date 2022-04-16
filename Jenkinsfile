@@ -11,9 +11,9 @@ pipeline {
                 sh '''#!/bin/bash
                     echo "Hello from bash"
                     echo "Who I'm $SHELL"
-                    echo $pid
+                    echo "$pid"
                     pid=$(lsof -t -i :4242 -s TCP:LISTEN)
-                    echo $pid
+                    echo "$pid"
                 '''
 //                 sh 'echo "this is the text from second step"'
 //                 sh "echo \$pid"
