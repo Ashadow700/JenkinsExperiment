@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh 'echo "this is the text from second step"'
                 echo 'yet another step and stuff'
-                sh 'pid=$(lsof -t -i :4242 -s TCP:LISTEN)'
+                sh "pid=\$(lsof -t -i :4242 -s TCP:LISTEN)"
 //                 echo $pid
 //                 sh 'kill -15 $pid'
             }
