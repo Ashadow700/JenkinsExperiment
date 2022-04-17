@@ -11,7 +11,7 @@ pipeline {
                 sh 'mvn clean install'
                 sh 'chmod 751 ./deploymentScript.sh'
                 sh './deploymentScript.sh'
-                sh 'java -jar ./target/JenkinsExperiment-spring-boot.jar &'
+                sh 'nohup java -jar ./target/JenkinsExperiment-spring-boot.jar >> ./output.logs &'
             }
         }
     }
