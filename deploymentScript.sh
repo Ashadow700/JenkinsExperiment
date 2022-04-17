@@ -2,8 +2,8 @@
 
 #mvn clean compile exec:java &
 
-export JENKINS_NODE_COOKIE=dontKillMe
-export BUILD_ID=dontKill
+#export JENKINS_NODE_COOKIE=dontKillMe
+#export BUILD_ID=dontKill
 
 echo "jen node: $JENKINS_NODE_COOKIE"
 echo "buildid: $BUILD_ID"

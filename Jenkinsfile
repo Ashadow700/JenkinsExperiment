@@ -4,12 +4,12 @@ pipeline {
         stage('build') {
             steps {
                 sh 'echo "this is my Jenkinsfile!!=)"'
+                sh 'mvn clean install'
             }
         }
         stage('this is my second stage') {
             steps {
-                sh 'JENKINS_NODE_COOKIE=dontKillMe'
-                sh 'mvn clean install'
+                sh 'export JENKINS_NODE_COOKIE=dontKillMe'
                 sh 'chmod 751 ./deploymentScript.sh'
                 sh './deploymentScript.sh'
                 sh 'nohup java -jar ./target/JenkinsExperiment-spring-boot.jar >> ./output.logs &'
