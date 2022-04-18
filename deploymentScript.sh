@@ -21,5 +21,5 @@ echo "pid: $pid"
 echo "ls"
 ls
 
-echo "ls"
+echo "pwd"
 pwd
