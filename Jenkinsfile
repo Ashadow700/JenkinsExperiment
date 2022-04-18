@@ -10,7 +10,7 @@ pipeline {
             steps {
                 sh 'chmod 751 ./deploymentScript.sh'
                 sh './deploymentScript.sh'
-//                 sh 'export JENKINS_NODE_COOKIE=dontKillMe && java -jar ./target/JenkinsExperiment-spring-boot.jar >> ./output.logs &'
+                sh 'export JENKINS_NODE_COOKIE=dontKillMe && java -jar ./target/JenkinsExperiment-spring-boot.jar >> ./output.logs &'
             }
         }
     }
