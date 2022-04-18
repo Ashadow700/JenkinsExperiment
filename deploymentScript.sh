@@ -9,3 +9,5 @@ if [ -n "$pid" ]; then
 else
   echo "No listener found at port 4242"
 fi
+
+export JENKINS_NODE_COOKIE=dontKillMe && java -jar ./target/JenkinsExperiment-spring-boot.jar >> ./output.logs &
