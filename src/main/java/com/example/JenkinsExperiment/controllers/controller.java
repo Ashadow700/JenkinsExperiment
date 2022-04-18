@@ -18,7 +18,7 @@ public class controller {
 
     @GetMapping(path="/tea")
     public ResponseEntity<String> tea(){
-        return new ResponseEntity<>("Soooo....changed maor change again", HttpStatus.I_AM_A_TEAPOT);
+        return new ResponseEntity<>("Soooo....changed other change", HttpStatus.I_AM_A_TEAPOT);
     }
 
     @GetMapping(path="/environment")
