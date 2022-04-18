@@ -9,7 +9,7 @@ pipeline {
         stage('deploy') {
             steps {
 //                 sh 'export JENKINS_NODE_COOKIE=dontKillMe'
-//                 sh 'chmod 751 ./deploymentScript.sh'
+                sh 'chmod 751 ./deploymentScript.sh'
                 sh './deploymentScript.sh'
 //                 sh 'echo $JENKINS_NODE_COOKIE'
                 sh 'export JENKINS_NODE_COOKIE=dontKillMe && java -jar ./target/JenkinsExperiment-spring-boot.jar >> ./output.logs &'
