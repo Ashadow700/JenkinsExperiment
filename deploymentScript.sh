@@ -16,7 +16,7 @@ echo "pid: $pid"
 
 kill -15 $pid
 
-export JENKINS_NODE_COOKIE=dontKillMe && java -jar ./target/JenkinsExperiment-spring-boot.jar >> ./output.logs &
+#export JENKINS_NODE_COOKIE=dontKillMe && java -jar ./target/JenkinsExperiment-spring-boot.jar >> ./output.logs &
 
 
 #pid=$(lsof -t -i :4242 -s TCP:LISTEN)
